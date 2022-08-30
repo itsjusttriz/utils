@@ -1,0 +1,1 @@
+Various consts, methods & utilities for my day to day projects.

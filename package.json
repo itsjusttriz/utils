@@ -1,6 +1,6 @@
 {
   "name": "@itsjusttriz/utils",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Various consts, methods and utilities for my day to day projects.",
   "main": "lib/index.js",
   "files": [
@@ -9,7 +9,7 @@
   "scripts": {
     "start": "tsc && node .",
     "build": "tsc",
-    "publish": "npm version patch && npm publish"
+    "auto-pub": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
