@@ -1,0 +1,27 @@
+{
+  "name": "@itsjusttriz/utils",
+  "version": "1.0.1",
+  "description": "Various consts, methods and utilities for my day to day projects.",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "start": "tsc && node .",
+    "build": "tsc",
+    "publish": "npm version patch && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsjusttriz/utils.git"
+  },
+  "author": "itsjusttriz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsjusttriz/utils/issues"
+  },
+  "homepage": "https://github.com/itsjusttriz/utils#readme",
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  }
+}
