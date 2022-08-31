@@ -13,14 +13,14 @@ export class IArray extends Array {
     }
 
     /**
-     * Get the first element of the Array. Cannot be chained.
+     * Get the last element of the Array. Cannot be chained.
      */
     getLast() {
         return this[this.length - 1]
     }
 
     /**
-     * Get the first element of the Array. Cannot be chained.
+     * Get a random element of the Array. Cannot be chained.
      */
     getRandom() {
         return this[Math.floor((Math.random() * this.length))];
