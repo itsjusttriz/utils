@@ -1,11 +1,6 @@
-export class IString extends String {
-    private _string!: string;
+export class IString {
 
-    constructor(text?: string) {
-        super();
-        if (text)
-            this.value = text;
-    }
+    private constructor() { }
 
     /**
      * Creates a randomised Hex value.
@@ -22,10 +17,13 @@ export class IString extends String {
         return color;
     }
 
-    public get value(): string {
-        return this._string;
-    }
-    public set value(value: string) {
-        this._string = value;
+    /**
+     * Takes a string, parses it & decides if is a numeric value, or not.
+     * 
+     * @param text
+     * @returns boolean
+     */
+    public static isNumeric(text: string): boolean {
+        return !isNaN(+text);
     }
 }
