@@ -18,6 +18,22 @@ export class IString {
     }
 
     /**
+     * Creates a randomised string, containing letters & numbers, depending on set 'length'.
+     * 
+     * @returns string
+     */
+    public static createRandomString(length: number) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const { length: chLength } = characters;
+        let result = '';
+
+        for (let i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * chLength));
+        }
+        return result;
+    }
+
+    /**
      * Takes a string, parses it & decides if is a numeric value, or not.
      * 
      * @param text
