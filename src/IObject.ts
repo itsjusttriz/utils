@@ -1,10 +1,10 @@
-import { BasicObjectProps, BasicStringifiedObjectProps } from "./types";
+import { BasicObjectProps, StringOnlyObjectProps } from "./types";
 
 export class IObject {
 
     private constructor() { }
 
-    public static stringifyKeyValue(obj: BasicObjectProps, exclude?: string[]): BasicStringifiedObjectProps {
+    public static stringifyKeyValue(obj: BasicObjectProps, exclude?: string[]): StringOnlyObjectProps {
         return Object.fromEntries(
             Object.entries(obj)
                 .filter(([key, _]) => !exclude?.includes(key))

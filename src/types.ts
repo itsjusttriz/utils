@@ -2,7 +2,7 @@ export type BasicObjectProps = {
     [key: string]: any;
 }
 
-export type BasicStringifiedObjectProps = {
+export type StringOnlyObjectProps = {
     [key: string]: string
 }
 
