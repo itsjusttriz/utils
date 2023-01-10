@@ -15,4 +15,8 @@ export class IObject {
     public static freeze(x: BasicObjectProps): BasicObjectProps {
         return JSON.parse(JSON.stringify(x));
     }
+
+    public static map(obj: BasicObjectProps, fn: (x: [key: string, val: any]) => any): BasicObjectProps {
+        return Object.fromEntries(Object.entries(obj).map(fn))
+    }
 }

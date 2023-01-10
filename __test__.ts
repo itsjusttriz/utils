@@ -6,6 +6,7 @@ async function runExamples() {
         new IArray([1, 2, 3]).getRandom(),
 
         IObject.stringifyKeyValue({ name: 'IJT', age: 23, isOver18: true }),
+        IObject.map({ age: 10 }, ([key, val]) => [key, val*2]),
 
         IRequest.getMethod('POST'),
 
