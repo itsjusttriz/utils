@@ -16,7 +16,7 @@ export class IArray extends Array {
      * Get the last element of the Array. Cannot be chained.
      */
     getLast() {
-        return this[this.length - 1]
+        return this.at(-1)
     }
 
     /**
