@@ -1,9 +1,10 @@
 export enum Status {
     OK = 200,
-    CONFLICT = 409,
     DUPLICATE_REQUESTS = 400,
+    UNAUTHORIZED = 401,
     NOT_FOUND = 404,
-    METHOD_NOT_ALLOWED = 405
+    METHOD_NOT_ALLOWED = 405,
+    CONFLICT = 409
 };
 
 export enum HTTP_Methods {
