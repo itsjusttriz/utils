@@ -1,5 +1,6 @@
 export * from './IArray';
 export * from './IString';
+export * from './INumber';
 export * from './IObject';
 export * from './IRequest';
 export * from './JSONResponse';
