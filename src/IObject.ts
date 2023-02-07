@@ -19,4 +19,11 @@ export class IObject {
     public static map(obj: BasicObjectProps, fn: (x: [key: string, val: any]) => any): BasicObjectProps {
         return Object.fromEntries(Object.entries(obj).map(fn))
     }
+
+    public static sanitiseKeys(obj: BasicObjectProps, exclude: string[]): BasicObjectProps {
+        return Object.fromEntries(
+            Object.entries(obj)
+                .filter(([key, _]) => !exclude?.includes(key))
+        )
+    }
 }
