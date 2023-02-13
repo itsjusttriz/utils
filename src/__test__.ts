@@ -1,10 +1,10 @@
-import { IArray, IObject, IRequest, IString, JSONResponse, wait } from '.';
+import { IArray, IObject, IRequest, IString, JSONResponse, ITime } from '.';
 
 async function runExamples() {
     const arr = [1, 2, 3, 4, 5, 6];
     const WAIT_TIME = 3 * 1000;
 
-    wait(WAIT_TIME).then(() => console.log("Finished Waiting."))
+    ITime.wait(WAIT_TIME).then(() => console.log("Finished Waiting."))
 
 
     console.log({
@@ -14,7 +14,7 @@ async function runExamples() {
         array_last: new IArray(arr).getLast(),
 
         objStringifyKeyVal: IObject.stringifyKeyValue({ name: 'IJT', age: 23, isOver18: true }),
-        objMap: IObject.map({ age: 10 }, ([key, val]) => [key, val*2]),
+        objMap: IObject.map({ age: 10 }, ([key, val]) => [key, val * 2]),
 
         reqGetMethod: IRequest.getMethod('POST'),
 
@@ -25,7 +25,7 @@ async function runExamples() {
         ).setMessage(
             'This is a test.'
         ).setPayload({
-                success: true
+            success: true
         })
     })
 };
