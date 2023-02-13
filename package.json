@@ -1,6 +1,6 @@
 {
   "name": "@itsjusttriz/utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Various consts, methods and utilities for my day to day projects.",
   "main": "lib/index.js",
   "files": [
