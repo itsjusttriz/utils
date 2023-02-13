@@ -6,19 +6,10 @@ export type StringOnlyObjectProps = {
     [key: string]: string
 }
 
+export type BasicArrayTuple = [key: string, val: any];
+
 export type JsonResponseType = {
     code: number,
     message: string,
     payload?: BasicObjectProps[] | BasicObjectProps
-}
-
-export const mongoose = {
-    REQUIRED_STRING: {
-        type: String,
-        required: true
-    },
-    NOT_REQUIRED_STRING: {
-        type: String,
-        required: false
-    }
 }
