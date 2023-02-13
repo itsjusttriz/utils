@@ -1,5 +1,5 @@
 export class INumber {
-    constructor() { }
+    protected constructor() { }
 
     public static convertTemperature(degree: number, type: 'fahrenheit' | 'celsius') {
         return ({

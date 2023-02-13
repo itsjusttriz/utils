@@ -1,6 +1,6 @@
 export class IString {
 
-    private constructor() { }
+    protected constructor() { }
 
     /**
      * Creates a randomised Hex value.

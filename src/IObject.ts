@@ -1,8 +1,8 @@
-import { BasicObjectProps, StringOnlyObjectProps } from "./types";
+import { BasicArrayTuple, BasicObjectProps, StringOnlyObjectProps } from "./types";
 
 export class IObject {
 
-    private constructor() { }
+    protected constructor() { }
 
     public static stringifyKeyValue(obj: BasicObjectProps, exclude?: string[]): StringOnlyObjectProps {
         return Object.fromEntries(
@@ -16,7 +16,7 @@ export class IObject {
         return JSON.parse(JSON.stringify(x));
     }
 
-    public static map(obj: BasicObjectProps, fn: (x: [key: string, val: any]) => any): BasicObjectProps {
+    public static map(obj: BasicObjectProps, fn: (x: BasicArrayTuple) => any): BasicObjectProps {
         return Object.fromEntries(Object.entries(obj).map(fn))
     }
 
