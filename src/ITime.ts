@@ -3,6 +3,24 @@ import { BasicObjectProps } from "./types";
 export class ITime {
     protected constructor() { }
 
+    public static formatNow(size: 'long' | 'short' = 'long') {
+        let currentDatetime = new Date();
+
+        if (size === 'long') {
+            return currentDatetime.toString();
+        }
+
+        let formattedDate = currentDatetime.getFullYear() + "-"
+            + this._addLeadingZeros(currentDatetime.getMonth() + 1) + "-"
+            + this._addLeadingZeros(currentDatetime.getDate()) + " "
+            + this._addLeadingZeros(currentDatetime.getHours()) + ":"
+            + this._addLeadingZeros(currentDatetime.getMinutes()) + ":"
+            + this._addLeadingZeros(currentDatetime.getSeconds())
+
+        return formattedDate;
+    }
+
+
     public static async getTimeUntil(time: number, includeWeeks: boolean) {
         let d = Math.max(time, 0);
         let t = this._seperateTime(d, includeWeeks);
@@ -21,6 +39,13 @@ export class ITime {
 
     public static wait(ms: number): Promise<number> {
         return new Promise(resolve => setTimeout(resolve, ms))
+    }
+
+    private static _addLeadingZeros(n: number) {
+        if (n <= 9) {
+            return "0" + n;
+        }
+        return n;
     }
 
     private static _seperateTime(d: number, includeWeeks: boolean): BasicObjectProps {
